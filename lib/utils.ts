@@ -26,6 +26,8 @@ export function generateRandomDate(seed: number) {
 }
 
 export function generateRandomImage(width: number, height: number) {
-  const randomImage = `https://picsum.photos/${width}/${height}.webp`;
+  // Add a random query parameter to force a new image each time
+  const timestamp = Date.now();
+  const randomImage = `https://picsum.photos/${width}/${height}.webp?${timestamp}`;
   return randomImage;
 }

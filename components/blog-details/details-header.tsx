@@ -16,7 +16,6 @@ export default function DetailsHeaderSection({
 }: DetailsHeaderSectionProps) {
   return (
     <header className="relative w-full h-[100vh]  max-h-[600px]">
-      {/* <RandomBackground width={2000} height={600} /> */}
 
       <div
         style={{ backgroundImage: `url(${HeaderBg.src})` }}

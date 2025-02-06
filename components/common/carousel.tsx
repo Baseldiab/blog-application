@@ -49,7 +49,7 @@ export default function Carousel({
     <div className="relative w-full overflow-hidden">
       {/* Main carousel content */}
       <div
-        className="relative h-full w-full"
+        className="relative h-full w-[101%]"
         style={{
           transform: `translateX(-${currentIndex * 100}%)`,
           transition: "transform 0.5s ease-in-out",
@@ -57,7 +57,7 @@ export default function Carousel({
         }}
       >
         {slides.map((slide, index) => (
-          <div key={index} className="min-w-full">
+          <div key={index} className={cn("min-w-full")}>
             {slide}
           </div>
         ))}

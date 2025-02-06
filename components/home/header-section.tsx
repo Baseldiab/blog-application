@@ -1,22 +1,18 @@
 "use client";
 
 import * as React from "react";
-import Autoplay from "embla-carousel-autoplay";
 
 // utils
+import { generateRandomImage } from "@/lib/utils";
 import { generateRandomDate } from "@/lib/utils";
 
 // ui imports
 
 // components common
 import HeaderSection from "@/components/common/header-section";
-import Carousel from "../common/carousel";
+import Carousel from "@/components/common/carousel";
 
 export default function HomeHeaderSection() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  );
-
   return (
     <HeaderSection>
       <article className="absolute left-0 md:top-2/3 top-1/2 -translate-y-1/2 md:max-w-[530px] max-w-full">

@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
-// utils
-import { generateRandomImage } from "@/lib/utils";
+// components common
+import RandomBackground from "@/components/common/random-background";
 
 interface HeaderSectionProps {
   children: ReactNode;
@@ -9,11 +9,8 @@ interface HeaderSectionProps {
 
 export default function HeaderSection({ children }: HeaderSectionProps) {
   return (
-    <header className="relative w-full h-[100vh]  max-h-[600px]">
-      <div
-        style={{ backgroundImage: `url(${generateRandomImage(2000, 600)})` }}
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full object-cover"
-      />
+    <header className="relative w-full h-[100vh] max-h-[600px]">
+      <RandomBackground width={2000} height={600} />
       <div className="absolute inset-0 bg-[#343A40] opacity-80" />
       <div className="relative z-10 container h-full">{children}</div>
     </header>

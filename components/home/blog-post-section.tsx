@@ -4,14 +4,12 @@ import React from "react";
 
 // utils
 import { generateRandomDate, generateRandomImage } from "@/lib/utils";
+import RandomBackground from "../common/random-background";
 
 export default function BlogPostSection() {
   return (
     <section className="relative w-full h-[100vh]  max-h-[600px]">
-      <div
-        style={{ backgroundImage: `url(${generateRandomImage(2000, 600)})` }}
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full object-cover"
-      />
+      <RandomBackground width={2000} height={600} />
       <div className="absolute inset-0 bg-[#343A40] opacity-80" />
 
       <SectionText />

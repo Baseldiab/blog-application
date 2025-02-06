@@ -8,11 +8,11 @@ export default async function BlogsSection() {
   const blogs = await getAllPosts();
   return (
     <section className="py-10 container">
-      <h1 className="text-theme-text-title text-start font-lora text-4xl font-bold">
+      <h1 className="text-theme-text-title text-start font-lora text-4xl font-bold md:py-8 sm:py-6 py-3">
         Blogs
       </h1>
 
-      <div className="flex flex-wrap gap-4">
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-8 gap-4">
         {blogs.map((blog) => (
           <BlogItem key={blog.id} blog={blog} />
         ))}

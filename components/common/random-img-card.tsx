@@ -24,11 +24,11 @@ export default function RandomImgCard({
     <>
       <Image
         src={imageUrl}
-        alt="random"
+        alt="post image"
         width={width}
         height={height}
         loading="lazy"
-        className={cn("rounded-lg", className)}
+        className={cn("rounded-lg h-[280px]", className)}
       />
     </>
   );

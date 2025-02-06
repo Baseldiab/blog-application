@@ -10,7 +10,7 @@ export function generateMetadata({ title, description }: MetadataProps): Metadat
     title: {
       absolute: `${title} | Blog app`,
     },
-    description: description || "Modern web application with Next.js 14",
+    description: description || "Discover engaging blog posts, detailed articles, and connect with our community of writers. Share your thoughts, explore diverse topics, and get in touch with us for any inquiries.",
     icons: {
       icon: '/favicon.ico',
    

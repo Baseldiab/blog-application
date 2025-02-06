@@ -34,6 +34,7 @@ const config: Config = {
             subtitle: "#6C757D",
             lightTitle: "#FFFFFF",
             lightSubtitle: "#E5E5E5",
+            navLogo: "#F8F9FA"
           },
           border: {
             main: "#D4A373",

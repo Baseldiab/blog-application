@@ -5,6 +5,7 @@ import { getUserById } from "@/api/routes/user";
 
 // components details
 import DetailsHeaderSection from "@/components/blog-details/details-header";
+import BlogsDetailsContentSection from "@/components/blog-details/blogs-content/details-content-section";
 
 export async function generateStaticParams() {
   try {
@@ -43,6 +44,8 @@ export default async function BlogDetailsPage({
     return (
       <main className="min-h-screen p-0 bg-gray-50">
         <DetailsHeaderSection blog={blog} user={user} />
+
+        <BlogsDetailsContentSection blog={blog} user={user} />
       </main>
     );
   } catch (error) {

@@ -5,13 +5,24 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function generateRandomDate() {
-  const startDate = new Date("2024-01-01");
-  const endDate = new Date();
+export function generateRandomDate(seed: number) {
+  // Use a deterministic seed
+  const seededRandom = () => {
+    const x = Math.sin(seed++) * 10000;
+    return x - Math.floor(x);
+  };
+
+  const startDate = new Date(2024, 0, 1).getTime(); // Jan 1, 2024
+  const endDate = new Date(2024, 11, 31).getTime(); // Dec 31, 2024
   const randomDate = new Date(
-    startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime())
+    startDate + seededRandom() * (endDate - startDate)
   );
-  return randomDate;
+  
+  const day = randomDate.getDate().toString().padStart(2, '0');
+  const month = (randomDate.getMonth() + 1).toString().padStart(2, '0');
+  const year = randomDate.getFullYear();
+  
+  return `${day}.${month}.${year}`;
 }
 
 export function generateRandomImage(width: number, height: number) {

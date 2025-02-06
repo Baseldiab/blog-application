@@ -15,7 +15,7 @@ export default function HeaderSection({ children }: HeaderSectionProps) {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-[#343A40] opacity-80" />
-      <div className="relative z-10 container">{children}</div>
+      <div className="relative z-10 container h-full">{children}</div>
     </header>
   );
 }

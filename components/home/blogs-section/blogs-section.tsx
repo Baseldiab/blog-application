@@ -30,8 +30,8 @@ export default async function BlogsSection() {
       ) : (
         <>
           <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 place-items-center md:gap-8 gap-4">
-            {blogs.map((blog) => (
-              <BlogItem key={blog.id} blog={blog} />
+            {blogs.map((blog, index) => (
+              <BlogItem key={blog.id} blog={blog} index={index} />
             ))}
           </div>
         </>

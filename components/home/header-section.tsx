@@ -2,6 +2,9 @@
 
 import * as React from "react";
 
+// assets
+import HeaderImg from "@/public/images/header.webp";
+
 // utils
 import { generateRandomDate } from "@/lib/utils";
 
@@ -11,7 +14,7 @@ import Carousel from "@/components/common/carousel";
 
 export default function HomeHeaderSection() {
   return (
-    <HeaderSection>
+    <HeaderSection imageUrl={HeaderImg.src}>
       <article className="absolute left-0 md:top-2/3 top-1/2 -translate-y-1/2 md:max-w-[530px] max-w-full">
         <Carousel paginationClassName={"left-0 top-[110%] mt-5"}>
           {Array.from({ length: 3 }).map((_, index) => (

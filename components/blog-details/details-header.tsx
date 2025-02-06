@@ -2,8 +2,8 @@
 import { PostItem } from "@/api/types/posts";
 import { UserItem } from "@/api/types/users";
 
-// components common
-import RandomBackground from "@/components/common/random-background";
+// assets
+import HeaderBg from "@/public/images/header-details.webp";
 
 interface DetailsHeaderSectionProps {
   blog: PostItem;
@@ -16,7 +16,13 @@ export default function DetailsHeaderSection({
 }: DetailsHeaderSectionProps) {
   return (
     <header className="relative w-full h-[100vh]  max-h-[600px]">
-      <RandomBackground width={2000} height={600} />
+      {/* <RandomBackground width={2000} height={600} /> */}
+
+      <div
+        style={{ backgroundImage: `url(${HeaderBg.src})` }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full object-cover"
+      />
+
       <div className="absolute inset-0 bg-[#343A40] opacity-80" />
 
       <SectionText blog={blog} user={user} />

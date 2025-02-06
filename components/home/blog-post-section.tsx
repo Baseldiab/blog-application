@@ -2,6 +2,9 @@
 
 import React from "react";
 
+// assets
+import BgImg from "@/public/images/post.webp";
+
 // utils
 import { generateRandomDate } from "@/lib/utils";
 
@@ -11,7 +14,12 @@ import RandomBackground from "@/components/common/random-background";
 export default function BlogPostSection() {
   return (
     <section className="relative w-full h-[100vh]  max-h-[600px]">
-      <RandomBackground width={2000} height={600} />
+      {/* <RandomBackground width={2000} height={600} />*/}
+      <div
+        style={{ backgroundImage: `url(${BgImg.src})` }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full object-cover"
+      />
+
       <div className="absolute inset-0 bg-[#343A40] opacity-80" />
 
       <SectionText />

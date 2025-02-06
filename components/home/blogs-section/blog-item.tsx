@@ -8,15 +8,18 @@ import { cn, generateRandomDate } from "@/lib/utils";
 // types
 import { PostItem } from "@/api/types/posts";
 
-// components common
-import RandomImgCard from "@/components/common/random-img-card";
 import Link from "next/link";
+import Image from "next/image";
+
+// components constants
+import { postsImg } from "@/components/constants/posts-img";
 
 interface BlogItemProps {
   blog: PostItem;
+  index: number;
 }
 
-export default function BlogItem({ blog }: BlogItemProps) {
+export default function BlogItem({ blog, index }: BlogItemProps) {
   const date = React.useMemo(() => {
     return generateRandomDate();
   }, []);
@@ -24,7 +27,14 @@ export default function BlogItem({ blog }: BlogItemProps) {
   return (
     <article className={cn("flex flex-col gap-2 relative", "max-w-[310px]")}>
       <Link title="blog details" href={`/blog/${blog.id}`}>
-        <RandomImgCard className="w-full" />
+        <Image
+          src={postsImg[index].img}
+          alt="post image"
+          width={310}
+          height={200}
+          loading="lazy"
+          className={cn("rounded-lg")}
+        />
       </Link>
 
       <Link title="blog details" href={`/blog/${blog.id}`}>

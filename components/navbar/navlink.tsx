@@ -19,7 +19,7 @@ const NavLink = ({ href, children }: NavLinkProps) => {
     <Link
       href={href}
       className={cn(
-        "text-theme-text-lightTitle font-bold text-xs",
+        "text-theme-text-lightTitle font-bold text-xs md:py-2 py-1",
         isActive ? "border-b-2 border-theme-border-main" : ""
       )}
     >

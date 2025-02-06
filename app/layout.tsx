@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { lora } from "@/components/util/fonts";
 import Navbar from "@/components/navbar/navbar";
+import Footer from "@/components/footer/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,10 +31,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className={`${lora.variable}`}>
-      <body className={inter.className}>
+      <body className={"flex flex-col min-h-screen"}>
         <Navbar />
 
         {children}
+
+        <Footer />
       </body>
     </html>
   );

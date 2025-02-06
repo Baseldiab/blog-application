@@ -12,8 +12,8 @@ export function generateMetadata({ title, description }: MetadataProps): Metadat
     },
     description: description || "Discover engaging blog posts, detailed articles, and connect with our community of writers. Share your thoughts, explore diverse topics, and get in touch with us for any inquiries.",
     icons: {
-      icon: '/favicon.ico',
-   
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
     },
   }
 }

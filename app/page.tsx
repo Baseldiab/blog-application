@@ -7,6 +7,7 @@ import BlogPostSection from "@/components/home/blog-post-section";
 export const metadata = generateMetadata({
   title: "Home",
   description: "My page description",
+
 });
 
 export default function Home() {

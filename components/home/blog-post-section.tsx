@@ -19,7 +19,6 @@ export default function BlogPostSection() {
 
 const SectionText = () => {
   const date = React.useMemo(() => {
-    // Use a fixed seed for each index to ensure consistency
     return generateRandomDate(1234);
   }, []);
 

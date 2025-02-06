@@ -4,16 +4,16 @@ import axios, {
   type AxiosError,
 } from "axios";
 
-const base_backend_url = "https://jsonplaceholder.typicode.com";
-
-const api_url = base_backend_url + "/";
+// Use environment variable or fallback to default
+const baseUrl = process.env.NEXT_PUBLIC_API_URL ?? "https://jsonplaceholder.typicode.com";
 
 const client = axios.create({
-  baseURL: api_url,
+  baseURL: baseUrl,
   headers: {
     Accept: "application/json, text/plain, */*",
   },
-  withCredentials: false
+  withCredentials: false,
+  timeout: 10000, // Add reasonable timeout
 });
 
 const request = async (options: AxiosRequestConfig) => {
@@ -23,18 +23,14 @@ const request = async (options: AxiosRequestConfig) => {
     },
   };
 
-  // Merge headers
-  const mergedHeaders = {
-    ...defaultOptions.headers,
-    ...options.headers,
-  };
-
-  // Merge options
+  // Merge headers and options in one step
   const mergedOptions = {
     ...defaultOptions,
     ...options,
-    headers: mergedHeaders,
-    withCredentials: false
+    headers: {
+      ...defaultOptions.headers,
+      ...options.headers,
+    },
   };
 
   const onSuccess = (response: AxiosResponse) => response.data;

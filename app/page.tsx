@@ -7,7 +7,6 @@ import BlogsSection from "@/components/home/blogs-section/blogs-section";
 
 export const metadata = generateMetadata({
   title: "Home",
-  description: "My page description",
 });
 
 export default function HomePage() {

@@ -3,8 +3,10 @@
 import React from "react";
 
 // utils
-import { generateRandomDate, generateRandomImage } from "@/lib/utils";
-import RandomBackground from "../common/random-background";
+import { generateRandomDate } from "@/lib/utils";
+
+// components common
+import RandomBackground from "@/components/common/random-background";
 
 export default function BlogPostSection() {
   return (

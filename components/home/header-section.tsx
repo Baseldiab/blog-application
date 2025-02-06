@@ -5,8 +5,6 @@ import * as React from "react";
 // utils
 import { generateRandomDate } from "@/lib/utils";
 
-// ui imports
-
 // components common
 import HeaderSection from "@/components/common/header-section";
 import Carousel from "@/components/common/carousel";

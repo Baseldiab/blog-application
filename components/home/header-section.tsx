@@ -3,7 +3,6 @@
 import * as React from "react";
 
 // utils
-import { generateRandomImage } from "@/lib/utils";
 import { generateRandomDate } from "@/lib/utils";
 
 // ui imports
@@ -20,6 +19,7 @@ export default function HomeHeaderSection() {
           {Array.from({ length: 3 }).map((_, index) => (
             <SliderItem
               key={index}
+              index={index}
               badge={"ADVENTURE"}
               title="Richird Norton photorealistic rendering as real photos"
               description="Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data."
@@ -35,13 +35,12 @@ interface SliderItemProps {
   badge: string;
   title: string;
   description: string;
+  index: number;
 }
-const SliderItem = ({ badge, title, description }: SliderItemProps) => {
-  // Use useMemo to ensure consistent date between renders
+const SliderItem = ({ badge, title, description, index }: SliderItemProps) => {
   const date = React.useMemo(() => {
-    // Use a fixed seed for each index to ensure consistency
-    return generateRandomDate(1234);
-  }, []);
+    return generateRandomDate(index);
+  }, [index]);
 
   return (
     <div className="md:max-w-[530px] max-w-full">

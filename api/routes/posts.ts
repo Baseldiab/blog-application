@@ -1,11 +1,11 @@
 import { request } from "@/api/request";
 
 // types imports
-import { PostItem } from "@/api/types/posts";
+import { PostItem, PostParams } from "@/api/types/posts";
 
 // POST create user
 export const getAllPosts = async (
-    params?: PostItem
+    params?: PostParams
   ): Promise< PostItem[] > => {
     return request({
       url: "posts",

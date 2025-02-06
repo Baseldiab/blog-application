@@ -19,7 +19,7 @@ export default function BlogPostSection() {
 
 const SectionText = () => {
   const date = React.useMemo(() => {
-    return generateRandomDate(1234);
+    return generateRandomDate();
   }, []);
 
   return (

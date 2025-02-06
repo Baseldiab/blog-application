@@ -4,3 +4,8 @@ export interface PostItem {
     title: string;
     body: string;
 }
+
+export interface PostParams {
+    _limit?: number;
+    _start?: number;
+}

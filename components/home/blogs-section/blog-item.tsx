@@ -17,7 +17,7 @@ interface BlogItemProps {
 
 export default function BlogItem({ blog }: BlogItemProps) {
   const date = React.useMemo(() => {
-    return generateRandomDate(1234);
+    return generateRandomDate();
   }, []);
 
   return (
@@ -27,7 +27,7 @@ export default function BlogItem({ blog }: BlogItemProps) {
       <p className="text-sm text-theme-text-subtitle font-normal font-lora">
         {date}
       </p>
-      <p className="text-xl text-theme-text-title truncate font-lora">
+      <p className="text-xl text-theme-text-title line-clamp-1 font-lora">
         {blog.title}
       </p>
       <p className="text-sm text-theme-text-subtitle font-normal font-lora line-clamp-3">

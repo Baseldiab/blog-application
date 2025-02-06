@@ -5,10 +5,10 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function generateRandomDate(seed: number) {
-  // Use a deterministic seed
+export function generateRandomDate(seed: number = 0) {
+  // Use the provided seed instead of random number
   const seededRandom = () => {
-    const x = Math.sin(seed++) * 10000;
+    const x = Math.sin(seed + 1) * 10000;
     return x - Math.floor(x);
   };
 

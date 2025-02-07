@@ -1,3 +1,6 @@
+// util
+import { generateMetadata } from "@/components/util/generate-metadata";
+
 // api
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostById } from "@/api/routes/posts";
@@ -6,6 +9,10 @@ import { getUserById } from "@/api/routes/user";
 // components details
 import DetailsHeaderSection from "@/components/blog-details/details-header";
 import BlogsDetailsContentSection from "@/components/blog-details/blogs-content/details-content-section";
+
+export const metadata = generateMetadata({
+  title: "Blog Details",
+});
 
 export async function generateStaticParams() {
   try {

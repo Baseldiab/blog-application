@@ -19,7 +19,7 @@ export default function BlogsDetailsContentSection({
   user,
 }: BlogsDetailsContentSectionProps) {
   return (
-    <section className="py-10 container !max-w-[860px]">
+    <section className="md:py-14 py-8  container !max-w-[860px]">
       <p className="text-theme-text-title text-sm font-lora text-normal  md:py-14 sm:py-7 py-4  mx-auto flex justiy-center items-center text-start border-b borer-gray-900">
         {blog.body}
       </p>

@@ -17,10 +17,10 @@ export default function ContactPage() {
       <header className="flex items-center justify-center relative w-full h-[220px]  max-h-[300px]">
         <div
           style={{ backgroundImage: `url(${HeaderBg.src})` }}
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full object-cover"
+          className="absolute bg-cover bg-center bg-no-repeat w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-[#343A40] opacity-80" />
+        <div className="absolute  bg-[#343A40]/80" />
 
         <h1 className="text-3xl font-bold py-5 text-theme-text-lightTitle z-30 md:mt-8 mt-4">
           Contact Us

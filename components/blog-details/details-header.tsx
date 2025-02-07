@@ -16,13 +16,12 @@ export default function DetailsHeaderSection({
 }: DetailsHeaderSectionProps) {
   return (
     <header className="relative w-full h-[100vh]  max-h-[600px]">
-
       <div
         style={{ backgroundImage: `url(${HeaderBg.src})` }}
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full object-cover"
+        className="absolute  bg-cover bg-center bg-no-repeat w-full h-full object-cover"
       />
 
-      <div className="absolute inset-0 bg-[#343A40] opacity-80" />
+      <div className="absolute bg-[#343A40]/80" />
 
       <SectionText blog={blog} user={user} />
     </header>

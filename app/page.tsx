@@ -11,7 +11,7 @@ export const metadata = generateMetadata({
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen p-0 bg-gray-50">
+    <main className="flex-1 min-h-screen p-0 bg-gray-50">
       <HomeHeaderSection />
 
       <BlogsSection />

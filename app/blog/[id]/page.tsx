@@ -42,7 +42,7 @@ export default async function BlogDetailsPage({
     }
 
     return (
-      <main className="min-h-screen p-0 bg-gray-50">
+      <main className="flex-1 min-h-screen p-0 bg-gray-50">
         <DetailsHeaderSection blog={blog} user={user} />
 
         <BlogsDetailsContentSection blog={blog} user={user} />

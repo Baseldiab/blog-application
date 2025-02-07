@@ -5,6 +5,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: { unoptimized: true },
+  staticPageGenerationTimeout: 120,
 };
 
 module.exports = nextConfig;

@@ -13,7 +13,7 @@ const client = axios.create({
     Accept: "application/json, text/plain, */*",
   },
   withCredentials: false,
-  timeout: 10000, // Add reasonable timeout
+  timeout: 30000, 
 });
 
 const request = async (options: AxiosRequestConfig) => {
@@ -35,12 +35,21 @@ const request = async (options: AxiosRequestConfig) => {
 
   const onSuccess = (response: AxiosResponse) => response.data;
 
-  const onError = (error: AxiosError) =>
-    Promise.reject({
-      message: error.message,
+  const onError = (error: AxiosError) => {
+    console.error('API Request failed:', {
+      url: error.config?.url,
+      method: error.config?.method,
+      timeout: error.config?.timeout,
+      error: error.message
+    });
+    
+    return Promise.reject({
+      message: error.message || 'Request failed',
       code: error.code,
       response: error.response,
+      url: error.config?.url
     });
+  };
 
   return client(mergedOptions).then(onSuccess).catch(onError);
 };

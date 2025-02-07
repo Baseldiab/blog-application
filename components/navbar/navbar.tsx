@@ -1,8 +1,11 @@
 import Link from "next/link";
 
+// utils
+import { cn } from "@/lib/utils";
+
 // components navbar
 import NavLink from "@/components/navbar/navlink";
-import { cn } from "@/lib/utils";
+import MobileNavbar from "@/components/navbar/mobile-navbar";
 
 // constants
 import { links } from "@/components/constants/nav-links";
@@ -27,7 +30,7 @@ export default function Navbar({ className }: NavbarProps) {
           Blog app
         </Link>
 
-        <ul className="flex items-center gap-4">
+        <ul className="flex items-center gap-4 max-md:hidden">
           {links.map((link) => (
             <li key={link.id}>
               <NavLink href={link.href}>{link.name}</NavLink>
@@ -35,6 +38,8 @@ export default function Navbar({ className }: NavbarProps) {
           ))}
         </ul>
       </div>
+
+      <MobileNavbar />
     </nav>
   );
 }

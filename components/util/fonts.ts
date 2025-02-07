@@ -5,5 +5,7 @@ export const lora = Lora({
   display: 'swap',
   variable: '--font-lora',
   preload: true,
+  fallback: ['system-ui', 'arial'],
+  adjustFontFallback: true,
 });
 

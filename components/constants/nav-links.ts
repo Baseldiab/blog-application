@@ -11,13 +11,13 @@ export const links: NavLinkType[] = [
     {
       id: "nav-about",
       name: "About",
-      href: "#about",
+      href: "/#about",
     },
 
     {
       id: "nav-articles",
       name: "Articles",
-      href: "#articles",
+      href: "/#articles",
     },
     {
       id: "nav-contact",

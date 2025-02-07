@@ -86,19 +86,19 @@ git clone https://github.com/yourusername/blog-app.git
 2. Install dependencies
 
 ```bash
-pnpm install
+npm install
 ```
 
 3. Start the development server
 
 ```bash
-pnpm dev
+npm run dev
 ```
 
 4. Build for production
 
 ```bash
-pnpm build
+npm run build
 ```
 
 ## 🤝 Contributing

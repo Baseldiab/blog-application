@@ -1,9 +1,13 @@
 "use client";
 
+// hook form
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+
+// zod
 import * as z from "zod";
 
+// sweet alert
 import Swal from "sweetalert2";
 
 // rules
@@ -35,11 +39,11 @@ export default function ContactForm() {
       showConfirmButton: false,
       timer: 1500,
     });
-    // Handle form submission here
   }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+      {/* Title */}
       <div className="flex flex-col gap-1">
         <label
           htmlFor="title"
@@ -60,6 +64,7 @@ export default function ContactForm() {
         )}
       </div>
 
+      {/* Email */}
       <div className="flex flex-col gap-1">
         <label
           htmlFor="email"
@@ -80,6 +85,7 @@ export default function ContactForm() {
         )}
       </div>
 
+      {/* Description */}
       <div className="flex flex-col gap-1">
         <label htmlFor="description" className="text-sm font-medium">
           Description (Optional)

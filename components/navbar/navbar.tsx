@@ -1,30 +1,17 @@
 import Link from "next/link";
 
-// types
-import { NavLink as NavLinkType } from "@/components/types/nav-links";
-
 // components navbar
 import NavLink from "@/components/navbar/navlink";
 import { cn } from "@/lib/utils";
+
+// constants
+import { links } from "@/components/constants/nav-links";
 
 interface NavbarProps {
   className?: string;
 }
 
 export default function Navbar({ className }: NavbarProps) {
-  const links: NavLinkType[] = [
-    {
-      id: "nav-home",
-      name: "Home",
-      href: "/",
-    },
-    {
-      id: "nav-contact",
-      name: "Contact Us",
-      href: "/contact",
-    },
-  ];
-
   return (
     <nav
       className={cn(

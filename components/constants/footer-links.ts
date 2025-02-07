@@ -18,7 +18,7 @@ export const explorateLinks: FooterLink[] = [
   {
     id: "explorate-about",
     name: "About",
-    href: "/",
+    href: "#about",
     },
     {
       id: "explorate-partners",

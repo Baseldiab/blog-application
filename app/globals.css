@@ -81,6 +81,10 @@
   }
 }
 
+* {
+  scroll-behavior: smooth !important;
+}
+
 .container {
   @apply xl:w-[90%] max-w-[1300px]  sm:w-[85%] w-[90%] !mx-auto;
 }

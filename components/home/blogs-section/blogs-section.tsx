@@ -12,7 +12,7 @@ export default async function BlogsSection() {
   const blogs = await getAllPosts({ _limit: 8 });
 
   return (
-    <section className="py-10 container">
+    <section id="articles" className="py-10 container">
       <h1 className="text-theme-text-title text-start font-lora text-4xl font-bold md:py-8 sm:py-6 py-3">
         Blogs
       </h1>

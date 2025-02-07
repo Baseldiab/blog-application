@@ -10,7 +10,7 @@ import { generateRandomDate } from "@/lib/utils";
 
 export default function BlogPostSection() {
   return (
-    <section className="relative w-full h-[100vh]  max-h-[600px]">
+    <section id="about" className="relative w-full h-[100vh]  max-h-[600px]">
       <div
         style={{ backgroundImage: `url(${BgImg.src})` }}
         className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full object-cover"

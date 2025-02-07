@@ -20,7 +20,7 @@ export default function BlogsDetailsContentSection({
 }: BlogsDetailsContentSectionProps) {
   return (
     <section className="md:py-14 py-8  container !max-w-[860px]">
-      <p className="text-theme-text-title text-sm font-lora text-normal  md:py-14 sm:py-7 py-4  mx-auto flex justiy-center items-center text-start border-b borer-gray-900">
+      <p className="text-theme-text-title text-sm font-lora text-normal  md:py-14 py-8  mx-auto flex justiy-center items-center text-start border-b borer-gray-900">
         {blog.body}
       </p>
 
@@ -31,7 +31,7 @@ export default function BlogsDetailsContentSection({
 
 const UserArticle = ({ user }: { user: UserItem }) => {
   return (
-    <article className="flex flex-col gap-4 md:py-10 sm:py-7 py-4">
+    <article className="flex flex-col gap-4 md:py-14 py-8">
       <div className="flex items-start  gap-4">
         <Image
           src={UserImg.src}
@@ -52,7 +52,7 @@ const UserArticle = ({ user }: { user: UserItem }) => {
         </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 grid-cols-1 sm:place-items-start place-items-center gap-3">
+      <div className="grid sm:grid-cols-2 grid-cols-1 place-items-start gap-3">
         <DetailsItem title="Name : " value={user.name} />
 
         <DetailsItem title="Email : " value={user.email} />
